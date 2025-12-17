@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import "./globals.css";
+
+//components
 import PixelBlast from '@/components/PixelBlast';
+import Navbar from "@/components/Navbar";
 
 const  schibstedGrotesk =  Schibsted_Grotesk({
   variable: "--font-geist-sans",
@@ -28,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${schibstedGrotesk.variable} ${martianMono.variable} min-h-screen antialiased`}
       >
+      <Navbar/>
       <div style={{ width: '100%', height: '600px', position: 'absolute', zIndex: '-1', opacity: '0.5'}}>
       
       <PixelBlast
